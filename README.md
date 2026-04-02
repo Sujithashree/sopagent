@@ -12,3 +12,8 @@ A system to answer employee questions by reading SOPs, citing sources, and preve
 - **Week 2:** Retrieval Engine (Finding the needle)
 
 See project documentation for details.
+
+#### Week 6 Update
+- Project structure initialized
+- Backend, frontend, and scripts folders created
+- Ready for further development
