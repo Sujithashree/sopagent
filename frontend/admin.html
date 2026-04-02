@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpsMind AI Admin</title>
+</head>
+<body>
+  <h1>Admin Knowledge Base</h1>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit">Upload SOP</button>
+  </form>
+  <div id="uploadResult"></div>
+  <script>
+    document.getElementById('uploadForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const res = await fetch('/admin/upload', { method: 'POST', body: formData });
+      const data = await res.json();
+      document.getElementById('uploadResult').innerText = JSON.stringify(data);
+    };
+  </script>
+</body>
+</html>
